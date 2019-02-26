@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/odyssey121/OwnPage#readme",
   "dependencies": {
+    "node-sass": "^4.11.0",
     "sass": "^1.17.2"
   }
 }
