@@ -1,0 +1,26 @@
+{
+  "name": "custom_page",
+  "version": "1.0.0",
+  "description": "own page",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odyssey121/OwnPage.git"
+  },
+  "keywords": [
+    "sven"
+  ],
+  "author": "Alexey Shirnin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/odyssey121/OwnPage/issues"
+  },
+  "homepage": "https://github.com/odyssey121/OwnPage#readme",
+  "dependencies": {
+    "sass": "^1.17.2"
+  }
+}
