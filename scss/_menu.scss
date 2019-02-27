@@ -1,38 +1,42 @@
+
 header{
     width:100%;
     height:70px;
-    border:2px solid $menu-color;
+    line-height:68px;
+    border:1px solid #E6EAEA;
+    font-size:15px;
+    font-weight: 400;
+    top:0;
+    left:0;
+    position: fixed;
+    z-index: 300;
+    display:flex;
     .left-box{
         width:180px;
         height:inherit;
         .menu-area{
-            float: left;
             min-width: 115px;
             height: 70px;
             border-right: 1px solid #E6EAEA;
             color: #202121;
-            cursor: pointer;
-            overflow: hidden;
-            
-            
+            cursor: pointer;      
         }
         .ico-menu{
-            margin-right:10px;
-            width:35px;
-            height:23px;
+            top:-2px;
+            vertical-align:middle;
+            width:18px;
+            height:18px;
             position:relative;
             overflow: hidden;
-            
-            
+            display:inline-block; 
+            margin-right:10px;
             .bar{
                 position:absolute;
-                height:4px;
+                height:3px;
                 width:100%;
                 background-color:$menu-color;
-                border-radius:5px;
+                border-radius:2px;
                 z-index:-1;
-                
-                // overflow:hidden;
                 &:after{
                     content: '';
                     display: block;
@@ -41,10 +45,14 @@ header{
                     background: #A6ABAB;
                     position: absolute;
                     top: 0;
-                    left:100%;               
+                    left:100%;
+                    border-radius:2px;            
                 }     
             }
         }    
+    }
+    .logo-header{
+        margin: 8px auto;
     }    
 }
 .item{
@@ -54,14 +62,14 @@ header{
 
 @for $x from 1 through 3{
     .bar:nth-child(#{$x}){
-        top:$x * 5px;
-        transition: all 0.6s ease-in-out;
+        top:$x * 4px;
+        transition: all #{$x*0.2}s ease-in-out;
     }
 }
 
-.animate{
-    transform:translateX(-35px);
-    transition: all 0.6s ease-in-out;
+.anime{
+    transform:translateX(-18px);
+    transition: all 0.3s ease-in-out;
 }
 
     
