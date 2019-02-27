@@ -11,12 +11,15 @@ body{
     overflow-x:hidden;
 }
 
+
 .wrapper{
-    position:relative;
+    top:0;
+    left:0;
+    position: absolute;
     width: 100%;
     min-height: 100%;
     background: #f4f7f6;
-    z-index: 2;
+    z-index: -2;
     &:before{
         content: '';
         display: block;
@@ -27,9 +30,10 @@ body{
         height: 100%;
         background-color: rgba(0,0,0,0.75);
         z-index: 400;
-        opacity: 1;
-        visibility: visible;
+        opacity: 0;
+        visibility: hidden;
         transition: all 0.5s ease-in-out;
     }
     
 }
+

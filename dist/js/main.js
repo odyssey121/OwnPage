@@ -1,6 +1,6 @@
 const menuBtn = document.querySelector('.menu-area');
 const bars = document.querySelectorAll('.bar');
-const navBar = document.querySelector('#nav-bar');
+const navBar = document.querySelector('.nav-toggle');
 
 
 function addAnime(){
@@ -13,11 +13,17 @@ function removeAnime(){
         bar.classList.remove('anime'));
 }
 
-function showNav(){
-    navBar.classList.remove('over-left');
-    console.log('test');
-}
 menuBtn.addEventListener('mouseover',addAnime);
 menuBtn.addEventListener('mouseout',removeAnime);
 
-menuBtn.addEventListener('click', showNav);
+// jquery===jquery===jquery===jquery===jquery===
+
+$('.menu-area').on('click',function(){
+    $('.nav-toggle').toggleClass('show-nav');
+    $('header').toggleClass('content-toggle');
+})
+$('#close').on('click',function(){
+    $('.nav-toggle').toggleClass('show-nav');
+    $('header').toggleClass('content-toggle');
+})
+
