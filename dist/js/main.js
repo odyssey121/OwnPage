@@ -1,6 +1,8 @@
 const menuBtn = document.querySelector('.menu-area');
 const bars = document.querySelectorAll('.bar');
 const navBar = document.querySelector('.nav-toggle');
+const wrapper = document.querySelector('.wrapper');
+const body = document.querySelector('#bg-image');
 
 
 function addAnime(){
@@ -13,17 +15,27 @@ function removeAnime(){
         bar.classList.remove('anime'));
 }
 
+function hideNav(e){
+    if(e.target === wrapper && 
+        body.classList.length){
+        body.classList.remove('nav-sidebar-open');
+        
+        
+    }
+}
+
 menuBtn.addEventListener('mouseover',addAnime);
 menuBtn.addEventListener('mouseout',removeAnime);
+document.addEventListener('click',hideNav);
+
 
 // jquery===jquery===jquery===jquery===jquery===
 
 $('.menu-area').on('click',function(){
-    $('.nav-toggle').toggleClass('show-nav');
-    $('header').toggleClass('content-toggle');
+    $('body').toggleClass('nav-sidebar-open');
 })
-$('#close').on('click',function(){
-    $('.nav-toggle').toggleClass('show-nav');
-    $('header').toggleClass('content-toggle');
+$('.btn-close').on('click',function(){
+    $('body').toggleClass('nav-sidebar-open');
+    
 })
 
